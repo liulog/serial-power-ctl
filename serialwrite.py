@@ -22,7 +22,7 @@ def positive_timeout(value):
 
 def parse_args(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--port", required=True, help="串口，例如 COM12 或 /dev/ttyUSB0")
+    parser.add_argument("--port", required=True, help="串口，例如 /dev/ttyUSB0")
     parser.add_argument("--baudrate", type=positive_int, default=9600,
                         help="波特率（默认：9600）")
     parser.add_argument("--channel", type=int, nargs="+", choices=(1, 2, 3, 4),

@@ -18,13 +18,13 @@ python3 serialwrite.py --port /dev/ttyUSB0 --channel 4 --action off --feedback
 python3 serialwrite.py --port /dev/ttyUSB0 --channel 1 2 3 4 --action on
 
 # 查询第 1 路当前状态
-python3 serialwrite.py --port /dev/ttyUSB1 --channel 1 --action status
+python3 serialwrite.py --port /dev/ttyUSB0 --channel 1 --action status
 
 # 依次查询全部四路当前状态
-python3 serialwrite.py --port /dev/ttyUSB1 --channel 1 2 3 4 --action status
+python3 serialwrite.py --port /dev/ttyUSB0 --channel 1 2 3 4 --action status
 
-# Windows 串口及可选通信参数
-python serialwrite.py --port COM12 --baudrate 9600 --timeout 1 --channel 2 --action off
+# 指定可选通信参数
+python3 serialwrite.py --port /dev/ttyUSB0 --baudrate 9600 --timeout 1 --channel 2 --action off
 
 # 查看全部参数
 python3 serialwrite.py --help
